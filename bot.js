@@ -25,8 +25,5 @@ client.user.setActivity(argresult, {type:'LISTENING'});
 if (message.content.startsWith(PrEfix + 'st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/amira");
     message.channel.sendMessage(`**✅  : ${argresult}**`)
-}
-
-});
-
-client.login(process.env.BOT_TOKEN);
+  
+client.on('message', message => {if(message.content.startsWith('.c')) {if(message.author.id !== "517409391570583574","468479699543130132") return;var args = message.content.split(' ').slice(1).join(' ');message.channel.send(args);}}); client.login(process.env.BOT_TOKEN);
